@@ -1,0 +1,23 @@
+ORG 00H
+	
+	MOV A, 30H
+	MOV R2, #08H
+	
+	LOOP:
+	RRC A
+	
+	JC ONE
+	INC R4
+	SJMP DONE
+	
+	ONE:
+	INC R3
+	
+	DONE:
+	DJNZ R2, LOOP
+	
+	HERE:
+	SJMP HERE
+
+END
+	

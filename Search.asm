@@ -1,0 +1,13 @@
+ORG 00H
+
+MOV R2,#30H // search start
+MOV R3,#10H
+MOV R4,#40H
+
+LOOP:
+
+
+
+CJNE @R4,@R2,LOOP
+
+END

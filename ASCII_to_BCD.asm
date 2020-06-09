@@ -1,0 +1,16 @@
+ORG 00H
+	
+	MOV A, 31H
+	XRL A, #30H
+	MOV R0, A
+	MOV A, 30H
+	XRL A, #30H
+	SWAP A
+	ADD A, R0
+	MOV 32H, A
+	
+	HERE:
+	SJMP HERE
+
+END
+	

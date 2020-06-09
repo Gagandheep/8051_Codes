@@ -1,0 +1,17 @@
+ORG 00H
+
+	MOV R0,#00H
+	MOV R1,#30H
+	
+	LOOP:
+		CJNE @R1,#0FFH,DOWN
+
+	UP:
+		INC R0
+		SJMP LOOP
+
+	DOWN:
+		DEC R0
+		SJMP LOOP
+
+END

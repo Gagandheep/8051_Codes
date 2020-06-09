@@ -1,0 +1,17 @@
+ORG 00H
+	
+	MOV A, 30H
+	SWAP A
+	ANL A, #0FH
+	MOV B, #0AH
+	MUL AB
+	MOV R2, A
+	MOV A, 30H
+	ANL A, #0FH
+	ADD A, R2
+	MOV 31H, A
+	
+	HERE:
+	SJMP HERE
+	
+END
