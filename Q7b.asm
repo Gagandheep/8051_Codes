@@ -1,0 +1,25 @@
+ORG 00H
+	
+	MOV R0, #50H
+	MOV R1, #10H
+	MOV R2, #0AH
+	
+	L1:
+	MOV A, @R0
+	MOV R3, #08H
+	
+	L2:
+	RRC A
+	JNC NEXT
+	INC @R1
+	NEXT:
+	DJNZ R3, L2
+	
+	INC R0
+	INC R1
+	DJNZ R2, L1
+	
+	SJMP $
+
+END
+	

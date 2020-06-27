@@ -7,7 +7,7 @@ ORG 00H
 	MOV 04, @R0
 	MOV 05, R0
 	
-	lARGEST:
+	LARGEST:
 	INC R0
 	// Greatest
 	MOV A, R2

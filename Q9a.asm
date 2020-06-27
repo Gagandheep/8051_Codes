@@ -1,0 +1,30 @@
+ORG 00H
+	
+	MOV R2, #09H
+	MOV R4, #09H
+	
+	LOOP1:
+	MOV R0, #30H
+	MOV R1, #31H
+	MOV 03, R4
+	
+	LOOP2:
+	MOV A, @R0
+	SUBB A, @R1
+	JC NEXT
+	MOV A, @R0
+	XCH A, @R1
+	MOV @R0, A
+	CLR C
+	
+	NEXT:
+	INC R0
+	INC R1
+	DJNZ R3, LOOP2
+	
+	DEC R4
+	DJNZ R2, LOOP1
+	
+	SJMP $
+	
+END

@@ -1,0 +1,16 @@
+ORG 00H
+	
+	; R1 as counter
+	MOV R0, #30H
+	
+	LOOP:
+	MOV A, @R0
+	CJNE A, #00H, DOWN
+	INC R1
+	SJMP LOOP
+	DOWN:
+	DEC R1
+	SJMP LOOP
+
+END
+	

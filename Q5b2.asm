@@ -1,0 +1,13 @@
+ORG 00H
+	
+	MOV A, 30H
+	ANL A, #0FH
+	MOV 32H, A
+	MOV A, 30H
+	SWAP A
+	ANL A, #0FH
+	MOV 31H, A
+	
+	SJMP $
+	
+END

@@ -1,0 +1,21 @@
+ORG 00H
+
+	SETB P1.2
+	MOV TMOD,#20H
+	MOV TH1,#67H
+
+	LOOP:
+	MOV R0,#02H
+	Back :  SETB TR1
+	Here :  JNB TF1,Here
+	SJMP Delay
+
+	Delay : 
+	CLR TR1
+	CLR TF1
+	DJNZ R0,Back
+	CPL P1.2
+	SJMP LOOP
+
+END
+

@@ -1,0 +1,14 @@
+ORG OOH
+	
+	MOV R0, #50H
+	MOV R2, #0AH
+	
+	LOOP:
+	MOV A, @R0
+	ADD A, #05H
+	MOV @R0, A
+	DJNZ R2, LOOP
+	
+	SJMP $
+
+END

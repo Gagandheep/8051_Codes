@@ -1,0 +1,31 @@
+ORG 00H
+	
+	MOV A, #05H
+	ADD A, #06H
+	MOV 31H, A
+	CLR A
+	ADDC A, #00H
+	MOV 30H, A
+	
+	MOV A, #45H
+	SUBB A, #10H
+	MOV 33H, A
+	CLR A
+	ADDC A, #00H
+	MOV 32H, A
+	
+	MOV A, #43H
+	MOV B, #78H
+	MUL AB
+	MOV B, #34H
+	MOV A, #35H
+	
+	MOV A, #43H
+	MOV B, #0FH
+	DIV AB
+	MOV B, #36H
+	MOV A, #37H
+	
+	SJMP $
+
+END

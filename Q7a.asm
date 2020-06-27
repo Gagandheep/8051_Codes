@@ -1,0 +1,22 @@
+ORG 00H
+	
+	MOV R0, #0FFH
+	MOV R1, #60H
+	MOV R2, #0AH
+	
+	LOOP:
+	CLR C
+	MOV A, @R1
+	SUBB A, R0
+	
+	JNC NEXT
+	MOV 00, @R1
+	MOV 07, R1
+	
+	NEXT:
+	INC R1
+	DJNZ R2, LOOP
+
+	SJMP $
+
+END

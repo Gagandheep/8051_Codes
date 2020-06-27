@@ -1,0 +1,23 @@
+ORG 00H
+	
+	MOV R0, #31H
+	MOV R1, #41H
+	
+	MOV A, @R0
+	ADD A, @R1
+	MOV 79H, A
+	
+	DEC R0
+	DEC R1
+	
+	MOV A, @R0
+	ADDC A, @R1
+	MOV 78H, A
+	
+	CLR A
+	ADDC A, #00H
+	MOV 77H, A
+	
+	SJMP $
+	
+END

@@ -9,6 +9,10 @@ ORG 00H
 	CJNE A, 40H, NEXT
 	MOV R3, #01H
 	MOV 05, R0
+	RRC A		// R4 is 0 if even
+	CLR A
+	ADDC A, #00H
+	MOV R4, A
 	SJMP DONE
 	
 	NEXT:

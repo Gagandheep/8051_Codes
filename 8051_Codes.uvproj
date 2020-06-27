@@ -377,9 +377,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>Sorting_Descending.asm</FileName>
+              <FileName>Q10b.asm</FileName>
               <FileType>2</FileType>
-              <FilePath>.\Sorting_Descending.asm</FilePath>
+              <FilePath>.\Q10b.asm</FilePath>
             </File>
           </Files>
         </Group>

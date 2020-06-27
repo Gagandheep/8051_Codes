@@ -1,0 +1,10 @@
+ORG 00H
+	
+	LOOP:
+	CLR C
+	DA A
+	MOV R0, A
+	INC A
+	SJMP LOOP
+
+END

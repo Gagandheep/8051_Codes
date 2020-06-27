@@ -1,0 +1,17 @@
+ORG 00H
+	
+	MOV R0, #30H
+	MOV DPTR, #9000H
+	MOV R2, #0AH
+	
+	LOOP:
+	MOV A, @R0
+	MOVX @DPTR, A
+	INC R0
+	INC DPTR
+	DJNZ R2, LOOP
+	
+	SJMP $
+	
+END
+	

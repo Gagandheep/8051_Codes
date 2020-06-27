@@ -1,0 +1,28 @@
+ORG 00H
+	
+	MOV R0, #99H
+	MOV R2, #99
+	
+	MOV A, R0
+	LOOP:
+	DEC A
+	ANL A, #0FH
+	CJNE A, #0FH, HERE
+	MOV A, R0
+	DEC A
+	ANL A, #0F9H
+	SJMP DONE
+	
+	HERE:
+	MOV A, R0
+	DEC A
+	ADD A, #00H
+	DA A
+	DONE:
+	MOV R0, A
+	DJNZ R2, LOOP
+	
+	SJMP $
+		
+END
+	
