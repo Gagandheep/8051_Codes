@@ -1,13 +1,17 @@
-ORG OOH
+ORG 00H
 	
 	MOV R0, #50H
 	MOV R2, #0AH
 	
 	LOOP:
-	MOV A, @R0
-	ADD A, #05H
-	MOV @R0, A
+	ADDC A, @R0
+	JNC NEXT
+	CLR C
+	INC 30H
+	NEXT:
 	DJNZ R2, LOOP
+	
+	MOV 31H, A
 	
 	SJMP $
 
