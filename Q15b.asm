@@ -1,0 +1,24 @@
+ORG 00H
+	
+	MOV R0, #21H
+	MOV R1, #23H
+	MOV 02H, @R0
+	INC R0
+	
+	MOV A, @R0
+	ANL A, R2
+	MOV @R1, A
+	
+	INC R1
+	MOV A, @R0
+	ORL A, R2
+	MOV @R1, A
+	
+	INC R1
+	MOV A, @R0
+	XRL A, R2
+	MOV @R1, A
+	
+	SJMP $
+
+END

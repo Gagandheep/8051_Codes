@@ -1,0 +1,40 @@
+ORG 00H
+	I0 EQU P0^0
+	I1 EQU P0^1
+	I2 EQU P0^2
+	I3 EQU P0^3
+		
+	S0 EQU P0^4
+	S1 EQU P0^5
+	
+	Y EQU P1^0
+		
+	MOV P0, #3FH
+	
+	LOOP:
+		JB S1, O_23
+		
+		JB S0, O_1
+		
+		MOV C, I0
+		MOV Y, C
+		SJMP LOOP
+		
+		O_1:
+		MOV C, I1
+		MOV Y, C
+		SJMP LOOP
+		
+		O_23:
+		JB S0, O_3
+		
+		MOV C, I2
+		MOV Y, C
+		SJMP LOOP
+		
+		O_3:
+		MOV C, I3
+		MOV Y, C
+		SJMP LOOP
+
+END
