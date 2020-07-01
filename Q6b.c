@@ -19,6 +19,7 @@ void main(void) {
 	TH1 = 0xFD;
 	SCON = 0x10;
 	IE = 0x90;
+	TR1 = 1;
 	
 	while(1) {
 		for (i = 0; i < 16; i++) {

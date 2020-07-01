@@ -377,9 +377,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>Q15b.asm</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\Q15b.asm</FilePath>
+              <FileName>Q6b.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Q6b.c</FilePath>
             </File>
           </Files>
         </Group>
